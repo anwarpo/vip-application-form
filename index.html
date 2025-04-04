@@ -1,87 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VIP Application Form</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <header>
     <div class="logo-container">
-      <!-- Replace "logo.png" with the path to your logo file -->
-      <img src="logo.png" alt="Your Company Logo" class="logo" />
+      <img src="logo.png" alt="CATENA RP Logo" class="logo">
     </div>
     <h1>CATENA RP | VIP Application & Rules Agreement</h1>
   </header>
 
   <div class="container">
-    <form id="vipForm">
-      <label for="discord">Discord Username:</label>
-      <input type="text" id="discord" name="discord" required />
+    <form id="vipForm" novalidate>
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="form-group">
+          <label for="discord">Discord Username:</label>
+          <input type="text" id="discord" name="discord" required>
+        </div>
+        <div class="form-group">
+          <label for="fivem">FiveM License or Discord ID:</label>
+          <input type="text" id="fivem" name="fivem" required>
+        </div>
+        <div class="form-group">
+          <label for="characterName">Character's Name:</label>
+          <input type="text" id="characterName" name="characterName" required>
+        </div>
+        <div class="form-group">
+          <label for="characterAge">Character's Age:</label>
+          <input type="number" id="characterAge" name="characterAge" required min="18" max="100">
+        </div>
+      </fieldset>
 
-      <label for="fivem">FiveM License or Discord ID:</label>
-      <input type="text" id="fivem" name="fivem" required />
+      <fieldset>
+        <legend>Roleplay Details</legend>
+        <div class="form-group">
+          <label for="experience">Roleplay Experience:</label>
+          <textarea id="experience" name="experience" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="reason">Reason for VIP Application:</label>
+          <textarea id="reason" name="reason" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="vipPackage">VIP Package:</label>
+          <select id="vipPackage" name="vipPackage" required>
+            <option value="package1">Car 1</option>
+            <option value="package2">Home 2</option>
+            <option value="package3">Package 3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="vipPrice">Price in Euros (€):</label>
+          <input type="number" id="vipPrice" name="vipPrice" required min="10" max="1000">
+        </div>
+      </fieldset>
 
-      <label for="characterName">Name:</label>
-      <input type="text" id="characterName" name="characterName" required />
+      <fieldset>
+        <legend>Terms and Conditions</legend>
+        <div class="form-group">
+          <input type="checkbox" id="agreeCheat" name="agreeCheat" required>
+          <label for="agreeCheat">I understand that cheating or exploiting will result in a permanent ban and loss of VIP perks.</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="agreeLeave" name="agreeLeave" required>
+          <label for="agreeLeave">I understand that leaving the server will result in the removal of VIP status without refund.</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="agreeConduct" name="agreeConduct" required>
+          <label for="agreeConduct">I agree to adhere to all server rules and maintain respectful conduct.</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="agreeNonTransferable" name="agreeNonTransferable" required>
+          <label for="agreeNonTransferable">I acknowledge that VIP status is non-transferable and all purchases are final.</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="agreeStaffRights" name="agreeStaffRights" required>
+          <label for="agreeStaffRights">I agree that staff reserves the right to revoke VIP status for rule violations or disrespectful behavior.</label>
+        </div>
+      </fieldset>
 
-      <label for="characterAge">Age:</label>
-      <input type="number" id="characterAge" name="characterAge" required />
-
-      <label for="experience">Roleplay Job:</label>
-      <textarea id="experience" name="experience" rows="4" required></textarea>
-
-      <label for="reason">Reason for buying VIP:</label>
-      <textarea id="reason" name="reason" rows="4" required></textarea>
-
-      <label for="vipPackage">VIP Package:</label>
-      <select id="vipPackage" name="vipPackage" required>
-        <option value="package1">Car 1</option>
-        <option value="package2">HOME 2</option>
-        <option value="package3">Package 3</option>
-      </select>
-
-      <label for="vipPrice">Price in Euros (€):</label>
-      <input type="number" id="vipPrice" name="vipPrice" required />
-
-      <!-- Agreement Checkboxes -->
-      <div class="rules">
-        <h3>VIP Terms and Conditions</h3>
-        <ul>
-          <li>
-            <input type="checkbox" id="agreeCheat" class="rule-checkbox" required />
-            <label for="agreeCheat">I understand that if I cheat or exploit, I will be permanently banned and lose all VIP perks.</label>
-          </li>
-          <li>
-            <input type="checkbox" id="agreeLeave" class="rule-checkbox" required />
-            <label for="agreeLeave">I understand that if I leave the server, my VIP will be removed with no refund.</label>
-          </li>
-          <li>
-            <input type="checkbox" id="agreeConduct" class="rule-checkbox" required />
-            <label for="agreeConduct">I understand that trash talk, toxicity, or breaking RP rules can result in a ban and VIP wipe.</label>
-          </li>
-          <li>
-            <input type="checkbox" id="agreeNonTransferable" class="rule-checkbox" required />
-            <label for="agreeNonTransferable">I understand that VIP is non-transferable and all purchases are final.</label>
-          </li>
-          <li>
-            <input type="checkbox" id="agreeStaffRights" class="rule-checkbox" required />
-            <label for="agreeStaffRights">I agree that staff has full rights to remove my VIP if I violate rules or disrespect the community.</label>
-          </li>
-        </ul>
+      <div class="form-actions">
+        <button type="submit">Submit Application</button>
       </div>
-
-      <!-- Submit Button -->
-      <input type="submit" value="Submit Application" />
     </form>
   </div>
 
-  <div class="footer">
-    <p>&copy; 2025 Your Company Name. All rights reserved.</p>
-  </div>
+  <footer>
+    <p>&copy; 2025 CATENA RP. All rights reserved.</p>
+  </footer>
 
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
