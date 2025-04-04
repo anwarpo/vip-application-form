@@ -1,8 +1,8 @@
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #000000; /* Black background */
-  color: #FFFFFF; /* White text */
+  font-family: 'Arial', sans-serif;
+  background-color: #0d1b2a; /* Dark blue background */
+  color: #ffffff; /* White text */
   margin: 0;
   padding: 0;
 }
@@ -10,7 +10,7 @@ body {
 header {
   text-align: center;
   padding: 20px;
-  background-color: #1A1A1A; /* Dark gray background */
+  background-color: #1e2a47; /* Deep blue background */
 }
 
 .logo-container {
@@ -18,84 +18,62 @@ header {
 }
 
 .logo {
-  width: 100px; /* Set logo width */
+  width: 120px; /* Increased logo width */
   height: auto;
 }
 
 h1 {
   margin: 0;
-  color: #FF0000; /* Red text for the header */
+  color: #00aaff; /* Light blue text */
+  font-size: 2em; /* Larger header text */
 }
 
 .container {
-  width: 80%;
+  width: 70%; /* Reduced container width */
   margin: 0 auto;
   padding: 20px;
 }
 
 form {
-  background-color: #333333; /* Dark gray background */
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  background-color: #1a2a3a; /* Darker blue background */
+  padding: 30px; /* Increased padding */
+  border-radius: 10px; /* More rounded corners */
+  margin-bottom: 30px; /* Increased bottom margin */
+}
+
+legend {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #00aaff; /* Light blue text */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased spacing between form groups */
 }
 
 label {
   display: block;
   margin-top: 10px;
-  color: #FFFFFF; /* White text for labels */
+  color: #ffffff; /* White text */
 }
 
 input, textarea, select {
   width: 100%;
-  padding: 10px;
+  padding: 12px; /* Increased padding */
   margin-top: 5px;
-  background-color: #555555; /* Medium gray background */
-  color: #FFFFFF; /* White text */
-  border: 1px solid #777777; /* Lighter gray border */
-  border-radius: 4px;
+  background-color: #2a3a4a; /* Medium blue background */
+  color: #ffffff; /* White text */
+  border: 1px solid #4a5a6a; /* Lighter blue border */
+  border-radius: 5px; /* Slightly more rounded corners */
+  font-size: 1em; /* Larger text */
 }
 
 input[type="submit"] {
   width: auto;
-  background-color: #FF4500; /* Orange-red background */
-  color: #FFFFFF; /* White text */
+  background-color: #00aaff; /* Light blue background */
+  color: #ffffff; /* White text */
   border: none;
   cursor: pointer;
-  padding: 10px 20px;
-  margin-top: 20px;
+  padding: 12px 24px; /* Increased padding */
 }
-
-input[type="submit"]:hover {
-  background-color: #FF6347; /* Tomato color on hover */
-}
-
-.rules {
-  background-color: #1A1A1A; /* Dark gray background */
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-.rules ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.rules li {
-  margin-bottom: 10px;
-  color: #FFFFFF; /* White text */
-}
-
-.rules input {
-  width: auto;
-  margin-right: 10px;
-}
-
-.footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #1A1A1A; /* Dark gray background */
-  margin-top: 20px;
-  color: #FFFFFF; /* White text */
-}
+ 
